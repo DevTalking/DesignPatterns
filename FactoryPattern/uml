@@ -1,0 +1,37 @@
+@startuml Factory UML
+class OperationFactory {
+    + Operation createOperation(operate : String)
+}
+
+class Operation {
+    - numberA : double = 0
+    - numberB : double = 0
+    + void setNumberA(numberA : double)
+    + double getNumberA()
+    + void setNumberB(numberB : double)
+    + double getNumberB()
+    + double getResult()
+}
+
+class OperationAdd {
+    + double getResult()
+}
+
+class OperationSub {
+    + double getResult()
+}
+
+class OperationMul {
+    + double getResult()
+}
+
+class OperationDiv {
+    + double getResult()
+}
+
+OperationFactory ..> Operation
+Operation <|-- OperationAdd
+Operation <|-- OperationSub
+Operation <|-- OperationMul
+Operation <|-- OperationDiv
+@enduml
