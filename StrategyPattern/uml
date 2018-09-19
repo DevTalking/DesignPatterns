@@ -1,6 +1,35 @@
 @startuml Strategy UML
+class StrategyContext {
+    + algorithmStrategy : AlgorithmStrategy
+    + StrategyContext(algorithm : AlgorithmType)
+    + runAlgorithm() : void
+}
+
+abstract class AlgorithmStrategy {
+    + abstract void algorithmInterface()
+}
+
+class ConcreteAlgorithmA {
+    + algorithmInterface() : void
+}
+
+class ConcreteAlgorithmB {
+    + algorithmInterface() : void
+}
+
+class ConcreteAlgorithmC {
+    + algorithmInterface() : void
+}
+
+StrategyContext o--> AlgorithmStrategy
+
+AlgorithmStrategy <|-- ConcreteAlgorithmA
+AlgorithmStrategy <|-- ConcreteAlgorithmB
+AlgorithmStrategy <|-- ConcreteAlgorithmC
+
 note as Summary
-    策略模式定义了算法家族，分别封装起来，让他们之间可以互相替换，
-    该模式让算法的变化不会影响到使用算法的用户。
+    策略模式定义了算法家族，分别封装起来，
+    让他们之间可以互相替换，该模式让算法
+    的变化不会影响到使用算法的用户。
 end note
 @enduml

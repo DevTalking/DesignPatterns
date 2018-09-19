@@ -6,27 +6,27 @@ class OperationFactory {
 class Operation {
     - numberA : double = 0
     - numberB : double = 0
-    + void setNumberA(numberA : double)
-    + double getNumberA()
-    + void setNumberB(numberB : double)
-    + double getNumberB()
-    + double getResult()
+    + setNumberA(numberA : double) : void
+    + getNumberA() : double
+    + setNumberB(numberB : double) : void
+    + getNumberB() : double
+    + getResult() : double
 }
 
 class OperationAdd {
-    + double getResult()
+    + getResult() : double
 }
 
 class OperationSub {
-    + double getResult()
+    + getResult() : double
 }
 
 class OperationMul {
-    + double getResult()
+    + getResult() : double
 }
 
 class OperationDiv {
-    + double getResult()
+    + getResult() : double
 }
 
 OperationFactory ..> Operation
