@@ -34,4 +34,10 @@ Operation <|-- OperationAdd
 Operation <|-- OperationSub
 Operation <|-- OperationMul
 Operation <|-- OperationDiv
+
+note as Summary
+    使用一个单独的类，通过标识管理
+    要实例化谁、如何实例化的这个过程
+    的模式称为工厂模式，这个类称为工厂类。
+end note
 @enduml

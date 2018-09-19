@@ -1,0 +1,6 @@
+@startuml Strategy UML
+note as Summary
+    策略模式定义了算法家族，分别封装起来，让他们之间可以互相替换，
+    该模式让算法的变化不会影响到使用算法的用户。
+end note
+@enduml
